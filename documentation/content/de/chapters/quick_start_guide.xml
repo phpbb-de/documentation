@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//DE"
+                         "http://www.docbook.org/xml/4.4/docbookx.dtd">
+<chapter id="quick_start_guide">
+	<?dbhtml  dir="quickstart" filename="index.html" ?>
+	<chapterinfo>
+		<releaseinfo>$Id$</releaseinfo>
+		<copyright>
+			<year>2006</year>
+			<holder>phpBB Group</holder>
+		</copyright>
+	</chapterinfo>
+	<title>Kurzanleitung phpBB 3.0. - Schnellstartanleitung</title>
+	<abstract>
+		<para>Diese Kurzanleitung führt dich schnell
+		durch die ersten Schritte der 
+		Installation und Konfiguration deines eigenen phpBB 3.0.-Forums.</para>
+	</abstract>
+	<section id="quick_requirements">
+		<sectioninfo>
+			<authorgroup>
+				<author>
+					<othername>Lehrling</othername>
+				</author>
+			</authorgroup>
+		</sectioninfo>
+		<title>Voraussetzungen</title>
+		<para>Um phpBB installieren zu können, müssen ein paar wenige Voraussetzungen 
+		erfüllt sein. Im folgenden Abschnitt werden diese Voraussetzungen erklärt. Notwendig sind:</para>
+		<itemizedlist>
+			<listitem>
+				<para>Ein Webserver oder Webspace bei einem Server-Betreiber, der eines der 
+				gängigen Betriebssysteme nutzt und PHP unterstützt.</para>
+			</listitem>
+			<listitem>
+				<para>Eine Datenbank, die mit sql kompatibel ist. Folgende Datenbank-Typen werden unterstützt:</para>
+				<itemizedlist>
+					<listitem>
+						<para>FireBird 2.1 or above</para>
+					</listitem>
+					<listitem>
+						<para>MySQL 3.23 or above</para>
+					</listitem>
+					<listitem>
+						<para>MS SQL Server 2000 or above (directly or via ODBC)</para>
+					</listitem>
+					<listitem>
+						<para>Oracle</para>
+					</listitem>
+					<listitem>
+						<para>PostgreSQL 7.x or above</para>
+					</listitem>
+					<listitem>
+						<para>SQLite 2</para>
+					</listitem>
+				</itemizedlist>
+			</listitem>
+			<listitem>
+				<para>PHP 4.3.3+ (>=4.3.3, >4.4.x, >5.x.x, >6.0-dev (kompatibel)) 
+				Datenbankunterstützung muss gegeben sein.</para>
+			</listitem>
+			<listitem>
+				<para>getimagesize() function enabled</para>
+			</listitem>
+			<listitem>
+				<para>Die folgenden PHP-Module sind optional und ermöglichen die Einrichtung  
+				zusätzlicher Funktionen.</para>
+				<itemizedlist>
+					<listitem>
+						<para>zlib Compression support</para>
+					</listitem>
+					<listitem>
+						<para>Remote FTP support</para>
+					</listitem>
+					<listitem>
+						<para>XML support</para>
+					</listitem>
+					<listitem>
+						<para>Imagemagick support</para>
+					</listitem>
+					<listitem>
+						<para>GD support</para>
+					</listitem>
+				</itemizedlist>
+			</listitem>
+		</itemizedlist>
+		<para>Während des Installationsprozesses wird geprüft, ob und welche Module
+		vorhanden sind. 
+		Nähere Erläuterungen dazu in <xref linkend="quick_installation" />. </para>
+          	</section>
+	        <section id="quick_installation">
+		<sectioninfo>
+			<authorgroup>
+				<author>
+					<othername>Lehrling</othername>
+				</author>
+			</authorgroup>
+		</sectioninfo>
+		<title>Installation</title>
+		<para>Die Version phpBB 3.0 Olympus verfügt über ein leicht bedienbares Installations-System, 
+		das dich durch den Installationsprozess führt.</para>
+		<para>Nachdem du das phpBB3-Paket entpackt hast und die Dateien in das
+		Verzeichnis hochgeladen hast, in dem dein Forum installiert werden soll, 
+                musst du die <acronym>URL</acronym> im Browser aufrufen, um zur Startseite der 
+				Installation zu gelangen.
+                Sobald diese <acronym>URL</acronym> 
+				(<uri>http://www.example.com/phpBB3</uri> beispielsweise), 
+                zum ersten Mal in deinem Browser aufgerufen, wird von phpBB automatisch 
+	        ermittelt, dass phpBB noch nicht installiert ist und du wirst automatisch 
+			zur Startseite der Installation geführt.</para>
+		<figure id="img_quick_installation_intro">
+			<title>Einführung</title>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="../images/quick_start_guide/installation_intro.png" format="PNG" />
+				</imageobject>
+				<caption>
+					<para>Die Startseite des Installations-Systems.</para>
+				</caption>
+			</mediaobject>
+		</figure>
+		<section id="quick_installation_intro">
+			<title>Einführung</title>
+			<para>Auf der 
+	Installationsstartseite findest du eine kurze
+	Einführung in phpBB. Dort kannst du auch die Lizenz einsehen, unter der phpBB veröffentlicht 
+	wurde (<ulink url="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>). 
+	Außerdem kannst du nachlesen, wo und wie du Support erhalten kannst.   
+	Um die Installation zu starten, musst du nun auf das Register 
+	<guilabel>Installieren</guilabel> klicken.
+	(siehe <xref linkend="img_quick_installation_intro" />).</para>
+		</section>
+		<section id="quick_installation_requirements">
+			<title>Voraussetzungen</title>
+			<important>
+			<para>Nähere Erläuterungen zu den Mindestvoraussetzungen, die notwendig sind,
+			um ein phpBB 3.0.-Forum zu installieren und zu betreiben, findest du unter 
+			<link linkend="quick_requirements">Voraussetzungen</link>. </para>
+			</important>
+			<para>Zunächst gelangst du zur Seite <i></i>Installations-Kompatibilität</i>. 
+			phpBB 3.0 wird einige Tests zu deiner Server-Konfiguration und 
+			deinen Dateien durchführen, um sicherzustellen, dass du phpBB installieren 
+			und benutzen kannst.
+			Um die Installation starten zu können,
+			musst <acronym>PHP</acronym> bei dir installiert sein. Die notwendige Mindest-PHP-Version 
+			wird dir unter <i>PHP-Version und -Einstellungen</i> angezeigt. Weiterhin 
+			muss mindestens eine Datenbank zur Verfügung stehen.
+			Wichtig ist auch, dass alle angezeigten Dateien vorhanden sind und die Dateibefugnisse 
+			korrekt gesetzt wurden.
+			Lies die Beschreibung jedes Abschnittes genau durch, um herauszufinden, ob 
+			diese (Dateien?) für den Betrieb von phpBB 3.0 optional sind
+			oder zwingend notwendig. Wenn alles in Ordnung ist, kannst du mit 
+			der Installation fortfahren. Klicke dafür auf
+			<guilabel>Installation starten</guilabel>.</para>
+		</section>
+		<section id="quick_installation_database">
+			<title>Datenbank-Konfiguration</title>
+			<para>Du musst nun festlegen, welche Datenbank du nutzen wirst. Siehe dazu 
+			<link linkend="quick_requirements">den Abschnitt über die Voraussetzungen</link>. Dort wird 
+			erläutert, welche Datenbank-Typen unterstützt werden. 
+			Wenn du die Einstellungen deiner Datenbank nicht kennst, 
+			solltest du dich mit deinem Server-Betreiber 
+			in Verbindung setzen und dort nachfragen.
+		        Ohne korrekte Angaben zu den Einstellungen der 
+				Datenbank ist eine Fortsetzung der Installation nicht möglich. 
+			Folgende Angaben sind erforderlich:</para>
+			<itemizedlist>
+				<listitem>
+					<para>Der <guilabel>Datenbank-Typ</guilabel> - die Datenbank, die genutzt werden soll 
+					(z.B. mySQL, SQL server, Oracle)</para>
+				</listitem>
+				<listitem>
+					<para>Der <guilabel>Der Datenbankserver-Hostname oder DSN</guilabel> - die Adresse 
+					des Datenbank-Servers.</para>
+				</listitem>
+				<listitem>
+					<para>Der <guilabel>Datenbankserver-Port</guilabel> - der Port des Datenbankservers 
+					(in der Regel ist diese Angabe nicht notwendig).</para>
+				</listitem>
+				<listitem>
+					<para>Der <guilabel>Name der Datenbank</guilabel> - der Name der Datenbank auf dem Server.</para>
+				</listitem>
+				<listitem>
+					<para>Der <guilabel>Datenbank-Benutzername</guilabel> und 
+					das <guilabel> Datenbank-Passwort</guilabel> - die Zugangsdaten für die Datenbank</para>
+				</listitem>
+			</itemizedlist>
+			<tip>
+			<para>Wenn du bei der Installation SQLite verwendest, musst du den vollständigen Pfad 
+			zu deiner Datenbank-Datei in das DSN-Feld eintragen und die Felder für den Benutzernamen und 
+			das Passwort leer lassen. Aus Sicherheitsgründen solltest du sicherstellen, dass die Datenbank-Datei
+			sich nicht an einem Ort befindet, der über das Internet erreichbar ist.</para>
+			</tip>
+			<figure id="img_quick_installation_database">
+				<title>Datenbank-Einstellungen</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="../images/quick_start_guide/installation_database.png" format="PNG" />
+					</imageobject>
+					<caption>
+						<para>Ein Screenshot der Datenbank-Einstellungen.
+						Stelle sicher, dass du während der Installation alle notwendigen Angaben zur Hand hast.</para>
+					</caption>
+				</mediaobject>
+			</figure>
+			<para>Das <guilabel>Präfix für die Tabellen in der Datenbank</guilabel> muss nur verändert werden, 
+			wenn du weißt, dass 
+			du diese Datenbank für mehrere phpBB-Installationen nutzen wirst. 
+			In diesem Falle kannst du für jede Installation ein eigenes Präfix wählen und so eine konfliktfreie 
+			Nutzung der Datenbank sicherstellen.</para>
+			<para>Nachdem du alle Daten eingegeben hast, kannst du mit der Installation fortfahren.
+			Klicke dafür auf <guilabel>Mit dem nächsten Schritt fortfahren.</guilabel>. 
+			Nun wird phpbb 3.0 die Daten, die du eingegeben hast, überprüfen. </para>
+			<para>Sollte nun die Meldung 
+		        "<guilabel>Es kann keine Verbindung zur Datenbank aufgebaut werden.</guilabel>" erscheinen,
+		        so weist das darauf hin, dass die Daten zur Datenbank fehlerhaft sind und eine Verbindung nicht
+		        hergestellt werden konnte. Überprüfe deine Datenbank-Daten und versuche es noch einmal.
+		        Solltest du dir bezüglich der Daten nicht ganz sicher sein, 
+				kontaktiere bitte deinen Server-Betreiber.</para>
+			<tip><para>Beachte, dass der Datenbank-Benutzername und das Passwort 
+			absolut korrekt sein müssen. Du musst exakt die Daten verwenden, die du
+			eingetragen hast oder von deinem Server-Betreiber erhalten hast.</para>
+			</tip>
+			<para>Solltest du in deiner Datenbank zuvor schon eine andere Version von phpBB mit demselben Präfix
+			installiert haben, wird dir das angezeigt. In diesem Falle wählst du
+			für die aktuelle Version einfach ein anderes Präfix.</para>
+			<para>Wenn du nun die Meldung <guilabel>Verbindung erfolgreich</guilabel> erhältst,
+			kannst du mit dem nächsten Schritt forfahren.</para>
+		</section>
+		<section id="quick_installation_admin">
+			<title>Administrator Details</title>
+			<para>Nun erstellst du deinen Admininstrator-Account.
+			Dieser Benutzer wird sämtliche administrativen Rechte
+			haben und wird der erste Benutzer in diesem Forum sein.
+			Alle Felder auf dieser Seite müssen ausgefüllt werden.
+			Hier kannst du auch die Standardsprache des Forums festlegen.
+			Das einfache phpBB 3.0-Basispaket enthält nur 
+			<guilabel>das englische Sprachpaket [GB]</guilabel>. 
+			Du kannst aber zusätzliche Sprachpakete bei 
+			<ulink url="http://www.phpbb.com/languages/">www.phpbb.com</ulink>, 
+			herunterladen und später hinzufügen.
+		        /* Hier könnte man eventuell Folgendes einbauen: Wenn du dein Board in deutscher 
+				Sprache betreiben möchtest, empfehlen wir bei 
+		        <ulink url="http://www.phpbb.de/downoads/pakete.php">www.phpbb.de/downloads/pakete</ulink>
+			das Komplettpaket herunterzuladen. Es enthält sowohl
+			das englische als auch die deutsche Sprachpaket. Du brauchst also kein zusätzliches
+			Sprachpaket zu installieren.*/
+			</para>
+		</section>
+		<section id="quick_installation_config">
+			<title>Konfigurationsdatei</title>
+			<para>In diesem Schritt wird die Konfigurationsdatei automatisch geschrieben.
+			Die Konfiguration ist wichtig für den ordnungsgemäßen Betrieb des Forums. Die Konfigurationsdatei 
+			enthält alle Datenbank-Einstellungen und ohne Konfigurationsdatei kann keine Verbindung zur 
+			Datenbank hergestellt werden. </para>
+			<para>Normalerweise treten beim Beschreiben der Konfigurationsdatei keine Probleme auf. 
+			In einigen Fällen jedoch ist es jedoch nicht möglich, 
+			die Konfigurationsdatei zu beschreiben, weil beispielsweise die Dateirechte nicht
+			richtig gesetzt wurden. In diesem Falle musst du die Datei manuell hochladen. 
+			Du erhältst die Meldung, dass du die Datei config.php 
+			<guilabel>herunterladen </guilabel>sollst und Anweisungen dazu, was du mit dieser Datei tun sollst.
+			Lies diese Anweisungen genau durch. Nachdem du die Datei hochgeladen hast, klickst du auf 
+		        <guilabel>Erledigt</guilabel>, um zum letzten Schritt zu gelangen.
+	                Solltest du jedoch keine Bestätigung darüber erhalten, dass das Hochladen der Datei 
+					erfolgreich war und wieder zur vorherigen Seite zurückgeführt werden, 
+					bedeutet dies, dass du die Datei nicht korrekt 
+		        hochgeladen hast.</para>
+		        </section>
+		        <section id="quick_installation_advanced">
+			<title>Erweiterte Einstellungen</title>
+			<para>Mithilfe der <guilabel>Erweiterten Einstellungen </guilabel> 
+			kannst du einige Einstellungen zur Konfiguration des Forums vornehmen.
+			Sie sind optional und können später wieder geändert werden. Wenn du also 
+			bezüglich dieser Erweiterten Einstellungen unsicher bist, lass diese Seite aus
+			und gehe zum abschließenden Schritt der Installation über.</para>
+			<para>Wenn die Installation erfolgreich war, kannst du nun auf 
+			<guilabel>Anmelden</guilabel> klicken, um in den 
+			<guilabel>Administrationsbereich</guilabel> zu gelangen. Herzlichen Glückwunsch!
+			Du hast phpBB 3.0 erfolgreich installiert. 
+			Aber es gibt immer noch vieles zu tun!</para>
+			<para>Sollte dir die Installation von phpBB 3.0 trotz Zuhilfenahme dieser Kurzanleitung
+			nicht gelingen, dann schau unter <link linkend="quick_support">Support</link> 
+			nach, um zu erfahren, wo du zusätzlichen Support erhalten kannst.</para>
+			<para>Solltest du hingegen eine Konvertierung von 2.0. zu 3.0 vornehmen wollen, dann solltest 
+			du jetzt die <link linkend="upgrade_guide">Schritt-für-Schritt Konvertierungsanleitung von 
+			phpBB2 auf phpBB3</link>
+			lesen, um weitere Informationen zu bekommen. 
+			Wenn nicht, dann lösche nun den Ordner install aus deinem Hauptverzeichnis, da 
+			nur der Administrations-Bereich zugänglich ist, solange dieses Verzeichnis existiert.	
+			</para>
+		</section>
+	</section>
+	<section id="quick_settings">
+		<sectioninfo>
+			<authorgroup>
+				<author>
+					<othername>Lehrling</othername>
+				</author>
+			</authorgroup>
+		</sectioninfo>
+		<title>Allgemeine Einstellungen</title>
+		<para>In diesem Abschnitt erfährst du, wie du einige der Grundeinstellungen deines Boards ändern kannst.</para>
+		<para>Direkt nach der Installation wirst du zum sogenannten "Administrationsbereich" geführt.
+		(<acronym>ACP</acronym>). 
+		Du kannst aber in diesen Bereich gelangen, indem du auf den Link 
+		<guilabel>[Administrationsbereich]</guilabel>, der sich 
+		im unteren Teil deines Forums befindet, klickst.
+		Über dieses Dialogfenster kannst du nun sämtliche Einstellungen deines Boards ändern.</para>
+		<section id="quick_settings_boardsettings">
+		<title>Board-Einstellungen</title>
+		<para>Wahrscheinlich wirst du nach der Installation zuerst das 
+		Menü "Board-Einstellungen" im <acronym>Administrationsbereich</acronym> aufrufen wollen, 
+		denn hier kannst du den Namen (<guilabel>Name des Boards</guilabel>) und die Beschreibung
+		(<guilabel>Beschreibung des Boards</guilabel>) deines Boards ändern.</para>
+		<figure id="img_quick_settings_sitename">
+				<title>Board-Einstellungen</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="../images/quick_start_guide/settings_sitename.png" format="PNG" />
+					</imageobject>
+					<caption>
+						<para>Hier kannst du den Namen deines Boards und die Beschreibung deines Boards bearbeiten.</para>
+					</caption>
+				</mediaobject>
+		</figure>
+		<para>Über dieses Formular kannst du auch Einstellungen wie die Zeitzone 
+		(<guilabel>Zeitzone für Gäste</guilabel>) und das Datumsformat, 
+		das die Anzeige des Datums und der Uhrzeit (<guilabel>Datumsformat</guilabel>) definiert,
+		anpassen.</para>
+		<para>Hier kannst du auch einen neuen Style für dein Board wählen (vorausgesetzt, du hast ihn installiert)
+		und damit den Benutzer-Style überschreiben lassen, unabhängig davon, welchen Style der 
+		Benutzer in seinem "Persönlichen Bereich" eingestellt hat. 
+		Dieser Style wird auch in allen Foren erscheinen, für die du keinen 
+		eigenen Style festgelegt hast. Wo du neue Styles finden kannst und
+		wie du sie installieren kannst, kannst du auf 
+		<ulink url="http://www.phpbb.com/styles/">styles homepage</ulink> von
+		<ulink url="http://www.phpbb.com/">phpbb.com</ulink> nachlesen.
+		.</para>
+		<para>Hier kannst du auch die Standardsprache deines Boards (<guilabel>Standardsprache</guilabel>) 
+		ändern. Diese Einstellung kann vom einzelnen Benutzer im Persönlichen Bereich
+		überschrieben werden. Standardmäßig enthält das offizielle phpBB3-Paket nur das englische
+		Sprachpaket. Bevor du also hier die Standardsprache ändern kannst, musst du das 
+		entsprechende Sprachpaket herunterladen und bei dir installieren. Für den Betrieb des Boards
+		in deutscher Sprache empfehlen wir daher die Installation des deutschen 
+		Komplettpakets, das das deutsche Sprachpaket schon enthält, sodass eine zusätzlich Installation 
+		des deutschen Sprachpaketes nicht notwenig ist. Weitere Einzelheiten
+		dazu findest du unter <link linkend="acp_system_language">Sprachpakete</link>.</para>
+		</section>
+		<!--/board_settings-->
+		<section id="quick_settings_boardfeatures">
+		<title>Board-Funktionalitäten</title>
+		<para>Hier kannst du einige Funktionen des Boards aktivieren bzw. deaktivieren.
+		Du kannst hier z.B. den Namenswechsel erlauben oder verbieten
+		(<guilabel>Namenswechsel erlauben</guilabel>) oder Dateianhänge (<guilabel>Dateianhänge 
+		erlauben</guilabel>) erlauben oder verbieten 
+		(<guilabel>Dateianhänge erlauben</guilabel>) oder den BBCode komplett deaktivieren.
+		(<guilabel>BBCode erlauben</guilabel>).</para>
+		<figure id="img_quick_settings_features">
+				<title>Board-Funktionalitäten</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="../images/quick_start_guide/settings_features.png" format="PNG" />
+					</imageobject>
+					<caption>
+						<para>Board-Funktionalitäten aktivieren bzw. deaktivieren mit 2 Klicks.</para>
+					</caption>
+				</mediaobject>
+			</figure>
+			<para>Wenn du verhindern möchtest, dass deine Benutzer unzählige Bilder in ihre Signatur einbinden,
+			kannst du du unter <guilabel>Signaturen</guilabel> bei der Funktion <guilabel>BBCode-Tag img in 
+			Signaturen erlauben</guilabel> einfach "Nein" angeben. Wenn du spezifischere Einstellungen
+			
+			
+			
+			
+			Dadurch kannst du ein Einbinden von Bildern 
+			in die Signatur unterbinden, ohne dass du deswegen den BBCode kompett deaktivieren musst. 
+			Weitere Optionen bezüglich der Signatur findest du unter "Signaturen".</para>
+			<para>Über das Menü "Board-Funktionalitäten" kannst du die verschiedenen grundlegenden 
+			Funktionen des Boards über eine JA/NEIN-Auswahl aktivieren oder deaktivieren.
+			Darüberhinaus jedoch gibt es für jede Funktion ein eigenes 
+			Menü, über das du die Feineinstellungen vornehmen kannst, angefangen von der maximalen Anzahl 
+			der Zeichen, die in einem Beitrag vorkommen dürfen 
+			(<guilabel>Maximale Anzahl der Zeichen pro Beitrag/Nachricht:</guilabel> 
+			unter "Beiträge") bis hin zu den maximalen Abmessungen für die Avatare 
+			(<guilabel>Maximale Abmessungen für Avatare:</guilabel> unter "Avatare".</para>
+			<important>
+			<para>Die Funktionen, die du deaktivierst, werden natürlich auch nicht den Mitgliedern
+			zur Verfügung stehen, die normalerweise aufgrund ihrer Berechtigungen diese
+			Funktionen ausüben dürften. Weitere Einzelheiten dazu findest du unter
+			<xref linkend="quick_permissions" /> oder der 
+			<link linkend="acp_permissions">in-depth guide in the Administrator Guide.</link></para>
+			</important>
+		</section>
+		<!--<para>TODO: Probably needs a better title. How to change the default forum settings, forum name or description, for instance. Does not need to have all settings explained in detail. We have the Admin Guide for that. It would be good to provide a link if there is anything that is discussed more detailed in the Admin Guide. </para>-->
+	</section>
+	<section id="quick_forums">
+		<sectioninfo>
+			<authorgroup>
+				<author>
+					<othername>Lehrling</othername>
+				</author>
+				<author>
+					<othername></othername>
+				</author>
+			</authorgroup>
+		</sectioninfo>
+		<title>Foren-Administration</title>
+		<para>Als ein Forum bezeichnen wir den Teil des Boards, in dem Themen untergebracht sind. 
+		Ohne Foren wäre es nicht möglich, Beiträge zu verfassen. Ein Forum zu erstellen, ist
+		sehr einfach.</para>
+		<para>Zunächst musst du dich einloggen. Gehe zu <guilabel>[ Administrationsbereich ]</guilabel>  unten auf der Seite.
+		Von dort gelangst du in den Administrationsbereich. Hier kannst du dein Board administrieren.</para>
+		<para>Oben im Administrationsbereich findest du verschiedene Register. Sie zeigen die
+		verschiedenen Menüs an. Um ein neues Forum zu erstellen, musst du zu 
+		<guilabel>Foren</guilabel> gehen.</para>
+		<para>Auf der Startseite des Menüs "Foren-Administration" kannst du die Foren deines Boards verwalten.
+		Du kannst nicht nur Foren erstellen, sondern auch Unterforen.
+		Unterforen sind Foren, die in einem übergeordnetem Forum
+		liegen. Weitere Informationen dazu findest du in der 
+		 <link linkend="acp_forums_subforums">administration guide on 
+		subforums</link>.</para>
+		<para>Gehe zu <guilabel>Neues Forum erstellen</guilabel> rechts auf der Seite.
+		In das Eingabefeld links davon gibst du nun den Namen des Forums ein, das du erstellen 
+		möchtest. Ein Beispiel: Wenn du ein Forum mit dem Namen "Test" erstellen möchtest,
+		dann musst du in das Eingabefeld "Test" eingeben. Nach Eingabe des Namens musst du auf
+		<guilabel>Neues Forum erstellen</guilabel> drücken, um das Forum zu erstellen.</para>
+		<para>Jetzt erscheint eine Seite mit der Überschrift  &quot;Neues Forum erstellen :: Test&quot;.
+		Hier kannst du dein Forum individuell anpassen. Du kannst diesem Forum z.B. ein Forumsbild
+		zuordnen. Du kannst festlegen, ob dein Forum eine Kategorie ist oder ein Forum und welche 
+		Forumsregeln für diese Forum gelten sollen. Du kannst auch eine kurze Beschreibung 
+		deines Forums verfassen, damit deine Benutzer wissen, um was für ein Forum es sich
+		handelt.</para>
+		<figure id="img_quick_create_forum">
+			<title>Neues Forum erstellen</title>
+			<mediaobject>
+				<imageobject>
+					<imagedata format="PNG" fileref="../images/quick_start_guide/creating_forums.png"/>
+				</imageobject>
+				<caption>
+					<para>Hier kannst du den Namen und die Beschreibung für dein Forum auswählen.</para>
+				</caption>
+			</mediaobject>
+		</figure>
+		<para>
+		Die Standard-Einstellungen sind in der Regel
+		für ein beliebiges Forum geeignet. Du kannst sie
+		jedoch an deine Bedürnisse anpassen. Auf drei
+		zentrale Forumseinstellungen solltest du
+		besonders achten. Über "Übergeordnetes Forum" 
+		kannst du festlegen, in welchem übergeordnetem Forum dein 
+		neues Forum liegen soll. Achte darauf, auf welcher Ebene
+		dein neues Forum liegen soll. (Die Einstellung 
+		"Übergeordnetes Forum" ist wichtig für die Erstellung von
+		Unterforen. Weitere Informationen zum Thema "Unterforen"
+		findest du in dem Abschnitt über die Erstellung von
+		Unterforen.)  Über  &quot;Kopiere Berechtigungen von&quot;
+		kannst du die Berechtigungen von einem schon vorhandenem
+		Forum auf dein neues Forum übertragen. Wenn du möchtest,
+		dass für alle Foren dieselben Berechtigungen gelten, solltest du hier
+		die Berechtigungen kopieren. Über &quo;Forum-Style&quot; kannst
+		du festlegen, welcher Style in deinem neuen Forum angezeigt
+		werden soll. Du kannst für dein neues Forum einen anderen Style 
+		anzeigen lassen. Weitere Informationen findest du unter
+		<xref linkend="acp_forums">in-depth 
+		section on forum creation</xref>.</para>
+		<para>
+		
+		Nachdem du alle Einstellungen für dein Forum angepasst hast, musst du nach unten
+		gehen und dort auf <guilabel>Absenden</guilabel> drücken, um das neue Forum mit den 
+		entsprechenden Einstellungen zu erstellen. Wenn die Erstellung des neuen
+		Forums erfolgreich war, erhältst du die Meldung "Forum wurde erfolgreich erstellt."
+		</para>
+		<para>Wenn du für das neue Forum Berechtigungen vergeben möchtest 
+		(oder einfach nur nichts anderes anklickst), wirst du zur Seite "Forenrechte" geleitet. 
+		Wenn du für dein Forum keine Berechtigungen vergeben möchtest
+		oder die vorgegebenen Berechtigungen übernehmen möchtest, dann klicke auf 
+		<guilabel>Zurück zur vorherigen Seite</guilabel>. Ansonsten kannst du nun
+		die Berechtigungen bearbeiten. Wenn du damit fertig bist, musst du unten auf der Seite auf 
+		<guilabel>Alle Berechtigungen anwenden</guilabel> klicken. Wenn die Berechtigungen
+		erfolgreich aktualisiert wurden, erhältst du die Meldung "Die Berechtigungen wurden aktualisiert.".
+		</para>
+		<important>
+			<para>Wenn du für dein Forum keine Berechtigungen vergibst, wird es für
+			niemanden, dich eingenommen, zugänglich sein.
+			</para>
+		</important>
+		<para>Du hast soeben die Berechtigungen erfolgreich aktualisiert und ein neues
+		Forum erstellt. Nach demselben Verfahren kannst du nun weitere Foren erstellen.
+		</para>
+		<para>Weitere Information zu den Forenrechten findest du hier: <xref linkend="quick_permissions" />
+		</para>
+	</section>
+	<section id="quick_permissions">
+		<sectioninfo>
+			<authorgroup>
+				<author>
+					<othername>Lehrling</othername>
+				</author>
+			</authorgroup>
+		</sectioninfo>
+		<title>Berechtigungen</title>
+		<para>
+		Nachdem du dein erstes Forum erstellt hast, must du festlegen, wer darauf 
+		zugreifen darf und was deine Benutzer dürfen und was sie nicht dürfen.
+		Dafür sind Berechtigungen da. Du kannst deinen Gästen z.B. das Recht verwehren, 
+		Beiträge zu schreiben, oder auch einem Benutzer moderative Befugnisse übertragen. 
+		Über phpBB3 Olympus ist es möglich, fast alle Aspekte der Benutzerinteraktion 
+		durch Berechtigungen zu steuern.
+		</para>
+
+		<section id="quick_permissions_types">
+			<title>Berechtigungstypen</title>
+			<para>Es gibt vier verschiedene Berechtigungstypen:</para>
+			<orderedlist>
+				<listitem id="quick_permission_types_user">
+					<para>Benutzer-/Gruppenrechte (forenübergreifend) - z.B. kann Avatar nicht ändern</para>
+				</listitem>
+				<listitem id="quick_permission_types_admin">
+					<para>Administratorenrechte (forenübergreifend) - z.B. kann Foren verwalten</para>
+				</listitem>
+				<listitem id="quick_permission_types_moderator">
+					<para>Moderatorenrechte (forenübergreifend oder forenspezifisch) - z.B. kann Themen
+					oder Benutzer sperren (nur forenübergreifend)
+				</para>
+				</listitem>
+				<listitem id="quick_permission_types_forum">
+					<para>Forenrechte (forenspezifisch) - z.B. kann ein Forum oder 
+					kann neue Themen im Forum starten</para>
+				</listitem>
+			</orderedlist>
+			<para>Jeder Berechtigungstyp besteht aus einem unterschiedlichen Paket an Berechtigungen und kann
+			sowohl auf forenübergreifender Ebene als auch auf forenspezifischer Ebene angewandt werden. 
+			Ein forenübergreifender Berechtigungstyp wird für das gesamte Board gesetzt.
+			Wenn du beispielsweise einem deiner Benutzer verbieten möchtest, private Nachrichten zu versenden,
+			musst du das über die forenübergreifenden Benutzerrechte tun. Die Administratorenrechte sind ebenfalls
+			forenübergreifend.
+			</para>
+			<figure id="img_quick_permissions_types">
+				<title>Forenübergreifende und forenspezifische Berechtigungen</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_types.png" />
+					</imageobject>
+					<caption>
+						<para>Forenübergreifende und forenspezifische Berechtigungen</para>
+					</caption>
+				</mediaobject>
+			</figure>
+			<para>Forenspezifische Berechtigungen hingegen greifen nur in festgelegten Foren. 
+			Wenn du beispielsweise jemandem verbieten möchtest, in einem bestimmten Forum
+			zu schreiben, wird das keinen Einfluss auf sein Schreibrecht in anderen
+			Foren haben. Der Benutzer wird weiterhin in allen anderen Foren, für die
+			er die forenspezifische Berechtiung zum Schreiben hat, schreiben können.</para>
+			<para>Du kannst sowohl auf forenübergreifender Ebene als auch auf 
+			forenspezifischer Ebene Moderatoren bestimmen. Wenn du zu einigen deiner Benutzer genügend
+			Vertrauen hast, kannst du sie zu globalen Moderatoren machen. Sie können dann alle Foren, 
+			zu denen sie Zugang haben, über die Berechtigungen, die du ihnen gewährst, 
+			moderieren. Im Gegensatz dazu können gewöhnliche
+			Moderatoren nur die Foren moderieren, für die du sie eingesetzt hast.
+			Diese Moderatoren können für verschiedene Foren verschiedene Moderatorenrechte haben.
+			Es ist möglich, dass sie in einem Forum Themen löschen können 
+			und in einem anderen Forum nicht. Die Berechtigungen der globalen Moderatoren hingegen
+			sind in allen Foren gleich.
+			</para>
+		</section>
+		<section id="quick_permissions_forum">
+			<title>Die Forenrechte festlegen</title>
+			<para>Um die Berechtigungen für dein neues Forum
+             festzulegen, gehst du zu <guilabel>Forenbasierte Berechtigungen</guilabel>.
+             Zunächst musst du dir überlegen, wie du die Berechtigungen festlegen möchtest.
+			 Wenn du sie für eine bestimmte Gruppe oder einen bestimmten Benutzer festlegen
+			 möchtest, musst du zu <guilabel>Gruppenspezifische Forenrechte</guilabel>oder 
+			 zu <guilabel>Benutzerspezifische Forenrechte</guilabel>gehen. 
+			 Über diese Funktionen ist es dir möglich, eine bestimmte Gruppe oder einen
+			 bestimmten Benutzer auszuwählen und dann die Foren auszuwählen, für die du
+			 Berechtigungen festlegen möchtest.
+			 </para>
+			<para>Für diese Schnellstartanleitung jedoch konzentrieren wir uns
+             nur auf die <guilabel>Forenrechte</guilabel>. Anstatt eine Gruppe oder einen Benutzer auszuwählen,
+             wählst du die Foren aus, die du zuerst anpassen möchtest.
+			 Du kannst sie entweder manuell im Menü oben auswählen, oder einzelne Foren einschließlich
+			 der untergeordneten Unterforen im Menü unten auswählen. Klicke auf
+			 <guilabel>Absenden</guilabel>, um zur nächsten Seite zu gelangen. </para>
+			<figure id="img_quick_permissions_select">
+				<title>Benutzergruppen auswählen</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_select.png" />
+					</imageobject>
+					<caption>
+						<para>Wähle Benutzergruppen oder Benutzer aus, um die Forenrechte festzulegen</para>
+					</caption>
+				</mediaobject>
+			</figure>
+			<para>Auf der Seite <guilabel>Forenrechte</guilabel>gibt es zwei Menüs,
+			über die du jeweils die Benutzergruppen bzw. die 
+			Benutzer auswählen kannst(siehe  <xref linkend="img_quick_permissions_select" />).
+			Oben erscheinen zwei Auswahlmenüs:
+			das Auswahlmenü <guilabel>Benutzer verwalten</guilabel> oder das Auswahlmenü 
+			<guilabel>Gruppen verwalten.</guilabel> Diese beiden Auswahlmenüs 
+			zeigen Benutzer und Benutzergruppen an, für die schon für mindestens eins
+			der ausgewählten Foren die Berechtigungen festgelegt wurden. 
+			Du kannst sie nun auswählen und und die Berechtigungen ändern. Dafür musst du auf
+			<guilabel>Berechtigungen ändern</guilabel> klicken. Du kannst die Berechtigungen
+			auch entfernen, indem du auf <guilabel>Berechtigungen entfernen</guilabel> klickst.
+			Dies führt dazu, dass deine Benutzer oder Benutzergruppen keinerlei Berechtigungen haben
+			und das Forum weder sehen, noch darauf zugreifen können (außer sie haben darauf Zugriff über
+			die Berechtigungen einer anderen Gruppe. Über die Felder unten auf der Seite kannst du neue
+			Benutzer oder Benutzergruppen hinzufügen, die momentan keine Berechtigungen für die
+			ausgewählten Foren haben.
+			</para>
+			<para>Um für eine Gruppe Berechtigungen hinzuzufügen, musst du eine
+			oder mehrere Gruppen hinzufügen, entweder über das Menü <guilabel>Gruppen hinzufügen</guilabel>
+			(so kannst du auch Benutzer hinzufügen, außer du möchtest neue Benutzer hinzufügen. Diese musst
+			du dann manuell in das Feld <guilabel>Benutzer hinzufügen</guilabel> eintragen oder
+			über die Funktion <guilabel>Nach einem Mitglied suchen</guilabel> suchen.) Wenn du auf
+			<guilabel>Berechtigungen hinzufügen</guilabel> klickst, wirst du zum Dialogfenster für
+			die Berechtigungen geführt. Jedes Forum, das du ausgewählt hast, ist aufgelistet. Und darunter
+			werden alle dazugehörigen Benutzergruppen und der Benutzer angezeigt, so
+			
+			
+			
+			
+			
+			
+			</para>
+			<para>Es gibt zwei Arten, die Berechtigungen festzulegen: du kannst sie manuell
+			einstellen oder eine vordefinierte Berechtigungs-Rolle anwenden. Letzteres ist einfacher,
+			bietet aber nicht die Optionen der manuellen Einstellung. Du kannst jederzeit zwischen beiden
+			Funktionen wählen. Wenn du mit den Einstellungen sehr zügig vorankommen möchtest, dann 
+			kannst du die Einführung für die manuelle Einstellung der Berechtigungen
+			überspringen und  <link linkend="quick_permissions_roles">direkt zu dem Abschnitt 
+			"Berechtigungsrollen" gehen.</link> Beachte aber, dass Berechtigungsrollen nur einen Bruchteil
+			dessen bieten, was das Berechtigungs-System bietet und wir glauben,
+			dass ein umfassendes Verständnis für die Berechtigungen wichtig ist, 
+			wenn du ein guter Olympus Administrator sein möchtest.</para>
+			<para>Die beiden Arten unterscheiden sich nur darin, dass sie auf unterschiedliche Weise eingestellt werden.
+			Aber für beide benutzt du dasselbe Dialogfenster.		
+			</para>
+			</section>
+		<section id="quick_permissions_manual">
+			<title>Manelle Einstellungen</title>
+			<para>Das ist der wichtigste Aspekt der Berechtigungen. Damit du sie korrekt anwenden kannst,
+			musst du Folgendes verstanden haben.
+			Es gibt drei Werte, die für Berechtigungen gesetzt werden können:		
+			</para>
+			<itemizedlist>
+				<listitem>
+					<para>Wenn<guilabel>JA</guilabel> gesetzt ist, ist eine Berechtigung aktiv 
+					<emphasis>außer</emphasis> sie wird durch ein <guilabel>NIE</guilabel> überschrieben.</para>
+				</listitem>
+				<listitem>
+					<para>Wenn <guilabel>NEIN</guilabel> gesetzt ist, ist eine Berechtigung inaktiv 
+					<emphasis>außer</emphasis> sie wird durch ein <guilabel>JA</guilabel> überschrieben.</para>
+				</listitem>
+				<listitem>
+					<para>Wenn <guilabel>NIE</guilabel> gesetzt ist, ist eine Berechtigung grundsätzlich inaktiv
+					und	<emphasis>kann nicht</emphasis> durch ein <guilabel>JA</guilabel> überschrieben werden.</para>
+				</listitem>
+			</itemizedlist>
+			<para>Diese drei Werte sind wichtig, denn es ist möglich, dass ein Benutzer über verschiedene 
+			Berechtigungen verfügt, je nachdem in welchen Gruppen er ist. Ein Beispiel:
+			Du erstellst für deine engagiertesten Mitglieder die benutzerdefinierte Gruppe "erfahrene Mitglieder" und 
+			legst für diese Gruppe Berechtigungen fest. Die Mitglieder, die in dieser Gruppe sind, sind aber auch
+			gleichzeitig in der Gruppe "Registrierte Benutzer", für die du andere Berechtigungen festgelegt hast.  
+			Nun möchtest du ein Forum namens "Gute alte Zeiten" erstellen, zu dem nur die Gruppe "erfahrene Mitglieder"
+			Zugang haben soll. Die "registrierten Benutzer" sollen dieses Forum gar nicht erst sehen dürfen.
+			Also stellst du bei den "erfahrenen Mitgliedern" für dieses Forum bei
+			<guilabel>Kann Forum sehen</guilabel> den Wert <guilabel>JA</guilabel> ein. Gleichzeitig darfst 
+			du aber <emphasis>auf keinen Fall</emphasis> bei den "registrierten Benutzern" hier <guilabel>NIE</guilabel>
+			angeben, denn in diesem Falle würden die "erfahrenen Mitglieder" dieses Forum nicht sehen, da sie ja auch 
+			Mitglieder der Gruppe "registrierte Benutzer" sind und ein <guilabel>NIE</guilabel> jedes 
+			<guilabel>JA</guilabel> überschreibt. Hier solltest du stattdessen <guilabel>NEIN</guilabel> einstellen. 
+			<guilabel>NEIN</guilabel> ist ein schwaches <guilabel>NIE</guilabel>, das von einem <guilabel>JA</guilabel> 
+			überschrieben werden kann.
+			
+
+
+			</para>
+			<figure id="img_quick_permissions_manual">
+				<title>Manuelle Berechtigungen</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_manual.png" />
+					</imageobject>
+					<caption>
+						<para>Berechtigungen manuell festlegen</para>
+					</caption>
+				</mediaobject>
+			</figure>
+		</section>
+		<section id="quick_permissions_roles">
+			<title>Berechtigungs-Rollen</title>
+			<para>phpBB3 Olympus verfügt über mehreren vorgegebene Standardberechtigungs-Rollen, 
+			die dir ein breites Spektrum an Optionen für die Zuweisung von Berechtigungen bieten.
+			Anstatt mühselig jede Option einzeln auszuwählen, kannst du einfach aus dem Menü eine 
+			vorgerfertigte Rolle auswählen. Für jede Rolle gibt es eine ausführliche Beschreibung, 
+			die erscheint, wenn du mit der Maus darübergehst. Wenn du mit deinen
+			Einstellungen zufrieden bist, kannst du sie abspeichern, indem du entweder auf
+			<guilabel>Berechtigungen anwenden</guilabel> oder auf 
+			<guilabel>Alle Berechtigungen anwenden</guilabel> drückst. Dadurch werden die Einstellungen 
+            gespeichert und mehr ist nicht zu tun.</para>
+			<figure id="img_quick_permissions_roles">
+				<title>Berechtigungs-Rollen</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_roles.png" />
+					</imageobject>
+					<caption>
+						<para>Berechtigungen zuweisen über Rollen</para>
+					</caption>
+				</mediaobject>
+			</figure>
+			<para>Berechtigungs-Rollen stellen nicht einfach nur eine schnelle und 
+			einfache Methode dar, um Berechtigungen festzulegen, sondern bieten erfahrenen
+             Administratoren auch die Möglichkeit, die Berechtigungen für
+             größere Boards effektiv zu verwalten. Du kannst eigene Rollen erstellen und bestehende
+			 Rollen anpassen. Rollen sind dynamisch und Änderungen an Rollen werden umgehend für alle Gruppen
+			 und Benutzer, denen du diese Rolle zugewiesen hast, wirksam. 
+			 </para>
+		</section>
+		<section id="quick_permissions_moderators">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>Lehrling</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Foren-Moderatoren bestimmen</title>
+			<para>Ein Gebiet, in dem Berechtigungen und Rollen sehr häufig zum Einsatz kommen, ist die Foren-Moderation.</para>
+			<para>Du hast sicher schon erkannt, dass die Moderation eines bestimmten Forums eine forenspezifische 
+			Berechtigung erfordert. Deswegen findest du die <guilabel>Foren-Moderatoren</guilabel> auch im
+			Abschnitt über <guilabel>Forenbasierte Berechtigungen</guilabel>.
+            Zunächst musst du das Forum oder die Foren auswählen, für die du Moderatoren bestimmen möchtest.
+            Diese Formularseite ist in drei Bereiche gegliedert. Im ersten Bereich kannst du mehrere Foren auswählen
+			(du musst dafür die STRG-Taste auf deiner Tastatur gedrückt halten, oder die cmd-Taste 
+			(wenn du MacOS X verwendest). Die Moderatoren-Berechtigungen, die du im folgenden Abschnitt festlegen wirst,
+			werden also nur für die Foren wirksam sein, die du ausgewählt hast. Im zweiten Bereich kannst du nur
+			ein Forum auswählen, aber hier werden die Einstellungen, die du vornimmst, nicht fur für dieses eine Forum
+			wirksam sein, sondern für sämtliche Unterforen, die diesem Forum untergeordnet sind. Wenn du Einstellungen
+			im dritten Bereich vornimmst, werden diese nur für das Forum, das du ausgewählt hast, wirksam sein.
+				
+			</para>
+			<para>Nachdem du also die Foren ausgewählt hast und auf  <guilabel>Absenden</guilabel> gedrückt hast,
+			solltest du zu einem Eingabeformular gelangen, das dir schon vertraut sein dürfte: <xref linkend="img_quick_permissions_select"/>. 
+			Hier nun kannst du die Benutzer oder die Benutzergruppen auswählen, denen du gewisse moderative Rechte
+			über die ausgewählten Foren übertragen möchtest. Wähle hier einige Benutzer oder Benutzergruppen
+			aus und drücke auf <guilabel>Berechtigungen hinzufügen</guilabel>.
+			</para>
+			<para>Auf dem nächsten Eingabeformular kannst du wählen, welche Moderator-Berechtigungen du den ausgewählten
+			Benutzern oder Benutzergruppen zuweisen möchtest. Zunächst werden dir vorgegebene Rollen angeboten, aus denen
+			du eine auswählen kannst.</para>
+			<variablelist>
+				<varlistentry>
+					<term>Der Standard Moderator</term>
+					<listitem>
+						<para>Ein Standard-Moderator kann Beiträge freigeben oder die Freigabe von
+                        Beiträgen verweigern, er kann Beiträge bearbeiten und löschen, er kann 
+						Meldungen löschen oder schließen. Er kann jedoch nicht den Autor eines Beitrags ändern.
+						Weiterhin kann er Warnungen erteilen und die Informationen zu einem Beitrag einsehen.
+						</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Der einfache Moderator</term>
+					<listitem>
+						<para>Der einfache Moderator kann Beiträge bearbeiten und Meldungen schließen und löschen. Auch 
+						er kann die Informationen zu einem Beitrag einsehen.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Der Warteschlangen-Moderator</term>
+					<listitem>
+						<para>Als Warteschlangen-Moderator kannst du nur Beiträge, die in der Moderator-Warteschlange
+						gelandet sind,	freigeben oder deren Freigabe verweigern und auch Beiträge editieren.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Der umfassende Moderator</term>
+					<listitem>
+						<para>Umfassende Moderatoren können alle Funktionen der Moderation wahrnehmen. 
+						Sie können sogar Benutzer sperren.</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+			<figure id="img_quick_permissions_moderator">
+				<title>Die Berechtigungen des Foren-Moderators</title>
+				<mediaobject>
+					<imageobject>
+			        	<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_moderator.png"/>
+					</imageobject>
+					<caption>
+						<para>Die Berechtigungen des Moderators festlegen</para>
+					</caption>
+				</mediaobject>
+			</figure>
+			<para>Wenn du alles erledigt hast, brauchst du nur noch auf <guilabel>Alle Berechtigungen anwenden</guilabel>
+			zu drücken. Alle Berechtigungen, die hier erwähnt wurden, können auch auf der rechten Seite
+			dieses Eingabeformulars ausgewählt werden. Dort stehen dir vielfältigere Optionen zu Auswahl.
+						</para>
+		</section>
+
+		<section id="quick_permissions_global">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>Lehrling</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Allgemeine Berechtigungen</title>
+			<para>Forenbasierte Berechtigungen sind dir zu speziell? phpBB3 kann dir mehr bieten:
+			die allgemeinen Berechtigungen.</para>
+			<orderedlist>
+				<listitem><para>Benutzerrechte</para></listitem>
+				<listitem><para>Gruppenrechte</para></listitem>
+				<listitem><para>Administratoren</para></listitem>
+				<listitem><para>Globale Moderatoren</para></listitem>
+			</orderedlist>
+			<para>Über die "Benutzerrechte" und die "Gruppenrechte" kannst du bestimmten Benutzern oder
+			Benutzergruppen Funktionen wie
+            Anhänge, Signaturen und Avatare erlauben oder verbieten. Beachte, dass manche Einstellungen nur dann
+			wirksam sind, wenn die entsprechende Funktion über die "Board-Funktionalitäten"
+			aktiviert wurde. Weitere Einzelheiten dazu findest du unter (<xref linkend="quick_settings_boardfeatures"/>).</para>
+			<para>Unter "Administratoren" kannst du Benutzern oder Benutzergruppen administrative Rechte zuweisen wie z.B. 
+			das Recht, Foren zu verwalten oder Benutzer-Berechtigungen zu ändern. Weitere Einzelheiten dazu
+            findest du unter <xref linkend="acp_permissions"/>.</para>
+			<para>Das Eingabeformular "Globale Moderatoren" bietet dir dieselben Möglichkeiten
+             wie das Eingabeformular für die Foren-Moderatoren (das in <xref linkend="quick_permissions_moderators"/>
+			 beschrieben wird. Allerdings sind die Rechte der globalen Moderatoren im gesamten Forum wirksam.
+
+			 </para>
+		</section>
+
+	</section>
+	<section id="quick_support">
+		<title>Support</title>
+		<para>Auf <ulink url="http://www.phpbb.de/support/">phpBB Team</ulink> findest du viele Informationen,
+          wenn du bei der Installation deines phpBB-Forums Hilfe brauchst.
+		  Zusätzlich zu diesem Handbuch bietet das 
+		  <ulink url="http://www.phpbb.de/community">Supportforum auf phpbb.de</ulink> viele Antworten
+		  auf Fragen, die Benutzer wie du haben könnten. Deswegen empfehlen wir dringend, die Suchfunktion
+		  zu benutzen, bevor du eine neue Frage stellst. Wenn du keine Antwort auf deine Frage findest,
+		  kannst du auch gerne ein neues Thema zu deinem Problem eröffnen. Es ist wichtig, dass du dein
+		  Problem genau darlegst. Je mehr wir über dein Problem wissen, desto schneller können wir dir 
+		  helfen. 
+		  </para>
+
+		<para>Zusätzlich zum Supportforum bieten wir auch 
+		die <ulink url="https://www.phpbb.de/kb/">Knowledge Base</ulink> an. Dort 
+		können Benutzer zu allgemeinen Fragen Artikel lesen und selbst verfassen.
+		Unsere Community hat sich viel Mühe damit gemacht, diese Artikel zu schreiben. 
+		Deswegen ist es sehr empfehlenswert, diese Artikel zu lesen.
+		</para>
+
+		<para>Wie bieten auch Echtzeitsupport an und zwar bei 
+		<ulink url="irc://irc.phpbb.com/phpbb">#phpBB</ulink>,
+		dem beliebten Open Source IRC network 
+		<ulink url="http://www.freenode.net/">Freenode</ulink>.
+		Normalerweise findest du hier Ansprechpartner aus allen
+		Teams sowie Forumsmitglieder, die sich freuen, wenn sie
+		dir helfen können. Bevor du diesem Channel beitrittst, 
+		solltest du die <ulink url="http://www.phpbb.com/support/irc/">IRC-Regeln</ulink>
+		durchlesen, denn hier gilt unsere IRC-Netiquette, die alle Benutzer beachten sollten.
+		In der Regeln sind immer mindestens 60 Benutzer online, wenn nicht sogar mehr, 
+		sodass du sicher sein kannst, jemanden zu finden, der dir helfen kann.
+		Es ist jedoch wichtig, dass du die IRC-Regeln liest und einhältst, sonst riskierst du es,
+		dass man dir nicht antwortet. Oft passiert es, dass Benutzer dem Channel beitreten und fragen,
+		ob jemand da ist und den Channel wieder verlassen, wenn innerhalb der ersten 30 Sekunden
+		niemand darauf antwortet. Stattdessen solltest du deine Frage stellen und abwarten. 
+		Frage nicht, ob du eine Frage stellen darfst, sondern stelle die Frage einfach!
+		
+		
+		</para>
+
+		<para>Du brauchst Support in einer anderen Sprache? Kein Problem. Auf dieser Seite
+		<ulink url="http://www.phpbb.com/support/intl/">International Support page</ulink> findest
+		 du Links zu zahlreichen Webseiten, die Support auf Spanisch, Französisch und vielen
+		 anderen Sprachen bieten.
+		
+		</para>
+	</section>
+</chapter>
